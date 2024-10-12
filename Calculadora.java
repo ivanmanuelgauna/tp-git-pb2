@@ -16,15 +16,16 @@ public class Ahorcado {
 			a = teclado.next();
 			System.out.println("Ingrese el segundo numero");
 			a = teclado.next();
-			if(opcion.equals(3)){
-				resultado = a + b; 
-			}else if(opcion.equals(2)){
+			
+			switch(opcion) {
+			case 1:
+				resultado = a + b;
+			case 2: 
 				resultado = a - b;
-			}else if(opcion.equals(1)){
-				resultado = a * b;
-			}else{
+			case 3:
 				resultado = a / b;
 			}
+			
 			System.out.println("El resultado es " + resultado.toString());
 		}
 }
