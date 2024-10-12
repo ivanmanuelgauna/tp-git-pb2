@@ -7,6 +7,8 @@ public class Ahorcado {
 		Integer opcion;
 		Integer resultado;
 		
+		
+		
 		do{
 			System.out.println("Ingrese su operación /n 1 para sumar /n 2 para
 					restar /n 3 para multiplicar /n 4 para dividir");
@@ -19,13 +21,25 @@ public class Ahorcado {
 			
 			switch(opcion) {
 			case 1:
-				resultado = a + b;
+				this.sumar(a, b);
 			case 2: 
-				resultado = a - b;
+				this.restar(a,b);
 			case 3:
-				resultado = a / b;
+				this.dividir(a,b);
 			}
 			
 			System.out.println("El resultado es " + resultado.toString());
 		}
+	
+	public double sumar(double a, double b) {
+		return a + b;
+	}
+	
+	public double restar(double a, double b) {
+		return a - b;
+	}
+	
+	public double dividir(double a, double b) {
+		return a / b;
+	}
 }
